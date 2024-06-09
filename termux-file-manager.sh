@@ -19,6 +19,7 @@ rm -rf $MANAGER_DIR
 mv file-manager-main $MANAGER_DIR
 
 cat << EOF > $MANAGER_BIN
+exec > /dev/null 2>&1
 cd $MANAGER_DIR
 nohup php -S $MANAGER_ADDR &> /dev/null &
 xdg-open http://$MANAGER_ADDR
