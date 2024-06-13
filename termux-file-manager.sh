@@ -12,7 +12,7 @@ mkdir -p $MANAGER_DIR
 cd $MANAGER_DIR
 
 wget $MANAGER_FILE -O file-manager.zip
-unzip file-manager.zip
+unzip -o file-manager.zip
 rm -f file-manager.zip
 
 cat << EOF > $MANAGER_BIN
