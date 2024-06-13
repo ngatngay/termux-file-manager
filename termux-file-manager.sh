@@ -8,6 +8,7 @@ MANAGER_FILE="https://github.com/ngatngay/file-manager/releases/latest/download/
 apt update
 apt install wget unzip php
 
+mkdir -p ~/bin
 mkdir -p $MANAGER_DIR
 cd $MANAGER_DIR
 
