@@ -1,22 +1,19 @@
 # termux file manager install script
 
-MANAGER_DIR="$PREFIX/opt/file-manager"
+MANAGER_DIR="~/.local/share/file-manager"
 MANAGER_ADDR="localhost:9753"
-MANAGER_BIN="$PREFIX/bin/tfm"
-MANAGER_FILE="https://github.com/ngatngay/file-manager/archive/main.zip"
+MANAGER_BIN="~/bin/tfm"
+MANAGER_FILE="https://github.com/ngatngay/file-manager/releases/latest/download/file-manager-full.zip"
 
 apt update
 apt install wget unzip php
 
-mkdir -p $PREFIX/opt
-cd $PREFIX/opt
+mkdir -p $MANAGER_DIR
+cd $MANAGER_DIR
 
 wget $MANAGER_FILE -O file-manager.zip
 unzip file-manager.zip
 rm file-manager.zip
-
-rm -rf $MANAGER_DIR
-mv file-manager-main $MANAGER_DIR
 
 cat << EOF > $MANAGER_BIN
 exec > /dev/null 2>&1
