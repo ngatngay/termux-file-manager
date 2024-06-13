@@ -2,7 +2,7 @@
 
 MANAGER_DIR="$HOME/.local/share/file-manager"
 MANAGER_ADDR="localhost:9753"
-MANAGER_BIN="$HOME/bin/tfm"
+MANAGER_BIN="$PREFIX/bin/tfm"
 MANAGER_FILE="https://github.com/ngatngay/file-manager/releases/latest/download/file-manager-full.zip"
 
 apt update
