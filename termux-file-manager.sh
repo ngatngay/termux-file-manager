@@ -6,7 +6,7 @@ MANAGER_BIN="$PREFIX/bin/tfm"
 MANAGER_FILE="https://github.com/ngatngay/file-manager/releases/latest/download/file-manager-full.zip"
 
 apt update
-apt install wget unzip php
+apt install -y wget unzip php
 
 mkdir -p $MANAGER_DIR
 cd $MANAGER_DIR
