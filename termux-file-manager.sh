@@ -17,9 +17,10 @@ rm -f file-manager.zip
 
 cat << EOF > $MANAGER_BIN
 exec > /dev/null 2>&1
+CURRENT_DIR=\$PWD
 cd $MANAGER_DIR
 nohup php -S $MANAGER_ADDR &> /dev/null &
-xdg-open http://$MANAGER_ADDR
+xdg-open "http://$MANAGER_ADDR/index.php?dir=\$CURRENT_DIR"
 EOF
 
 chmod +x $MANAGER_BIN
